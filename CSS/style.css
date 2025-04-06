@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    background-color: rgb(248, 239, 239);
+}
+
+/*Font från Google fonts.*/
+main{
+    font-family: "Rationale", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: larger;
+}
+
+/*Headern görs responsiv med "flex" och innehållet centreras.*/
+header{
+    width: 100%;
+    height: 7em;
+    margin-bottom: 3%;
+    background-color: rgb(120, 120, 206);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/*En annan font är i h1*/
+h1{
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5em;
+    color: white;
+}
+
+/*Main-innehållet får en flex-container som wrappar när sidan minskas.*/
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    justify-content: center;
+}
+
+/*Korten får en grid-layout så att jag enklare kan styra
+vad som hamnar var på korten.*/
+.card {
+    display: grid;
+    grid-template-rows: 10em 0 4em;
+    background-color: rgb(120, 120, 206);
+    margin: 2%;
+    padding: 1em;
+    width: 17em;
+    height: 17em;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Kortens knapp hamnar på rad 3 på korten.*/
+.show-info-btn {
+    grid-row: 3;
+    display: flex;
+    color: black;
+    border: none;
+    border-radius: 2em;
+    width: 5em;
+    height: 2em;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    align-self: flex-end;
+    font-family: "Rationale", sans-serif;
+    font-size: medium;
+    font-weight: 500;
+}
+
+/*Knapparna får en hover-effekt när musen rörs över dom.*/
+.show-info-btn:hover {
+    background-color: lightgray;
+}
+
+/*Sidan får en footer.*/
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6em;
+    margin-top: 5%;
+    background-color: grey;
+}
+
+/*En kontakt-mailsymbol finns i footern.*/
+footer i {
+    font-size: xx-large;
+    color: rgb(248, 239, 239);
+}
